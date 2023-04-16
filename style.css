@@ -1,26 +1,76 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid green; */
 }
 :root {
-    --purple: hsl(259, 100%, 65%);
-    --light-red: hsl(0, 100%, 67%);
-    --white: hsl(0, 0%, 100%);
-    --off-white: hsl(0, 0%, 94%);
-    --light-grey: hsl(0, 0%, 86%);
-    --smokey-grey: hsl(0, 1%, 44%);
-    --off-black: hsl(0, 0%, 8%);
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
 }
 body {
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    display: grid;
-    place-items: center;
-    align-content: center;
-    background-color: var(--light-grey);
+  min-height: 100vh;
+  padding: 1rem 0;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  background-color: var(--light-grey);
 }
 #age-calculator-container {
-    width: min(90vw, 52.5rem);
-    background-color: var(--off-white);
+  width: min(90vw, 52.5rem);
+  padding: 3.75rem 3.5rem;
+  background-color: var(--off-white);
+  border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+}
+.head-contain {
+  padding-bottom: 2.875rem;
+  border-bottom: 2px solid var(--smokey-grey);
+}
+.head-contain form {
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+.date-contain {
+  width: 9.87rem;
+}
+.date-contain label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+.date-contain input {
+  width: 100%;
+  font-size: 1.875rem;
+  font-weight: 800;
+  background: none;
+  outline: none;
+  border: 1px solid var(--smokey-grey);
+}
+.submit-btn {
+  width: 6rem;
+  height: 6rem;
+  margin-left: auto;
+  border-radius: 3rem;
+  border: none;
+  transform: translateY(100%);
+  background-color: purple;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.submit-btn:active {
+  transform: translateY(100%) scale(0.85);
+}
+.body-contain p {
+  font-size: 7rem;
+  font-weight: 700;
+  font-style: italic;
+}
+.body-contain p span {
+  color: var(--purple);
 }
