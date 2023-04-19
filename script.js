@@ -6,7 +6,10 @@ const dayText = document.querySelector(".day-txt span");
 const monthText = document.querySelector(".month-txt span");
 const yearText = document.querySelector(".year-txt span");
 
-submitButton.addEventListener("click", () => {});
+submitButton.addEventListener("click", () => {
+  // ageCalculator("10/06/2001");
+  ageCalculator(`${monthInput.value}/${dayInput.value}/${yearInput.value}`);
+});
 // var dob = new Date("06/24/2008");
 // const dob = new Date("06/10/2001");
 // const monthDiff = Date.now() - dob.getTime();
@@ -59,8 +62,10 @@ function ageCalculator(birth) {
     if (dob > today) {
       alert("Invalid date input - Please try again!");
     } else {
-      return yearAge + " years " + monthAge + " months " + dayAgeDayAge + " days";
+      // return yearAge + " years " + monthAge + " months " + dayAgeDayAge + " days";
+      document.querySelector(".day-txt span").textContent = dayAgeDayAge;
+      document.querySelector(".month-txt span").textContent = monthAge;
+      document.querySelector(".year-txt span").textContent = yearAge;
     }
   }
 }
-console.log(ageCalculator("10/06/2001"));
