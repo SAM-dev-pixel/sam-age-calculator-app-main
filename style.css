@@ -99,13 +99,14 @@ body {
 }
 #age-calculator-container {
   width: min(90vw, 52.5rem);
-  padding: 3.75rem 3.5rem;
+  /* padding: 3.75rem 3.5rem; */
+  padding: clamp(.75rem, 6vw, 3.75rem) clamp(.5rem, 5.75vw, 3.5rem);
   background-color: var(--off-white);
   border-radius: 1.5rem 1.5rem 6rem 1.5rem;
 }
 .head-contain {
   padding-bottom: 2.875rem;
-  border-bottom: 2px solid var(--smokey-grey);
+  border-bottom: 1px solid var(--smokey-grey);
 }
 .head-contain form {
   display: flex;
@@ -134,8 +135,10 @@ body {
   border-radius: .5rem;
 }
 .submit-btn {
-  width: 6rem;
-  height: 6rem;
+  /* width: 6rem;
+  height: 6rem; */
+  width: clamp(2rem, 8vw, 6rem);
+  height: clamp(2rem, 8vw, 6rem);
   margin-left: auto;
   border-radius: 3rem;
   border: none;
@@ -144,14 +147,19 @@ body {
   cursor: pointer;
   transition: 0.25s;
 }
+.submit-btn img {
+  width: 50%;
+}
 .submit-btn:active {
   transform: translateY(100%) scale(0.85);
 }
 .body-contain p {
-  font-size: 7rem;
+  /* font-size: 7rem; */
+  font-size: clamp(.75rem, 12vw, 7rem);
   font-weight: 700;
   font-style: italic;
   /* line-height: 100%; */
+  line-height: 1;
 }
 .body-contain p span {
   color: var(--purple);
